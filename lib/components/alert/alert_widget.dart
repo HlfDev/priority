@@ -20,7 +20,7 @@ class Alert extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final statusBarHeight = MediaQuery.paddingOf(context).top;
+    final statusBarHeight = MediaQuery.of(context).padding.top;
     return Material(
       child: Ink(
         color: backgroundColor,

@@ -58,7 +58,7 @@ class AlertMessengerState extends State<AlertMessenger>
   void didChangeDependencies() {
     super.didChangeDependencies();
 
-    final alertHeight = MediaQuery.paddingOf(context).top + kAlertHeight;
+    final alertHeight = MediaQuery.of(context).padding.top + kAlertHeight;
 
     animation = Tween<double>(begin: -alertHeight, end: 0.0).animate(
       CurvedAnimation(
@@ -77,7 +77,7 @@ class AlertMessengerState extends State<AlertMessenger>
 
   @override
   Widget build(BuildContext context) {
-    final statusBarHeight = MediaQuery.paddingOf(context).top;
+    final statusBarHeight = MediaQuery.of(context).padding.top;
 
     return ValueListenableBuilder<List<Alert>>(
         valueListenable: controller,
